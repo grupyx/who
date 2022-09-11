@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuakz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: 0;
+        }
+
+        body {
+            background-color: #333;
+            color: white;
+            width: 80%;
+            margin: auto;
+        }
+
+        header {
+            /* border: 1px solid white; */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: 100px 0 70px;
+        }
+
+        article {
+            font-family: monospace;
+            text-align: center;
+        }
+
+        .about {
+            font-weight: bold;
+            font-size: 15px;
+            padding-bottom: 12px;
+        }
+
+        .nama {
+            font-family: "Uncial Antiqua", cursive;
+            font-weight: 900;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.png" alt="" width="200px">
+        </div>
+        <p class="nama">Chuakz</p>
+        <span>Just for fun</span>
+
+    </header>
+    <article>
+        <p class="about">
+            About Us
+        </p>
+        <div style="margin-bottom: 20px; text-align: center;">
+            <div style="margin-bottom: 20px; text-align: center;">
+                <div style="font-size: 13px; font-style: italic; margin-bottom: 20px;">
+                    <span id="quotes">"Kami adalah organisasi yang berdiri pada tanggal 05 September 2022. Tidak hanya
+                        Teknologi Informasi yang menjadi topik organisasi kami, tetapi kami juga membahas segala hal
+                        tentang sains, teknologi, keamanan siber, peretasan, sosial, pandangan hidup dan
+                        lain-lain."
+                    </span>
+                </div>
+                <script>
+
+                    // Typing Animation
+
+                    function typing(elementID, text) {
+
+                        if (document.getElementById(elementID).innerHTML == null) {
+
+                            document.getElementById(elementID).innerHTML = text;
+
+                        } else {
+
+                            document.getElementById(elementID).innerHTML += text;
+
+                        }
+
+                    }
+
+                    function typer(elementID, speed) {
+
+                        var text = document.getElementById(elementID).innerHTML;
+
+                        document.getElementById(elementID).innerHTML = "";
+
+                        i = 0;
+
+                        setInterval(function () {
+
+                            if (i < text.length) {
+
+                                typing(elementID, text.charAt(i));
+                                i++;
+
+                            }
+
+                        }, speed);
+
+                    }
+
+                    var elementID = "quotes";
+                    var speed = 100;
+
+                    typer(elementID, speed);
+                </script>
+                <script defer
+                    src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+                    integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+                    data-cf-beacon='{"rayId":"748957e478246c75","version":"2022.8.1","r":1,"token":"e9461ba5749d461881967076c6a33378","si":100}'
+                    crossorigin="anonymous">
+                    </script>
+            </div>
+        </div>
+        <p class="contact about">
+            Contact Us
+        </p>
+        <span style="font-size: 13px">Copyright@2022</span>
+    </article>
+    <audio autoplay>
+        <source src="metalslug.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+</html>
